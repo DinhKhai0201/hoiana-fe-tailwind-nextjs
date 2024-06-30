@@ -165,7 +165,7 @@ export default function Home({}) {
                 />
                 <button
                   type="submit"
-                  className="flex-none mt-5 w-fit h-fit rounded-md bg-main-50 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-main-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
+                  className="self-end flex-none mt-5 w-fit h-fit rounded-md bg-main-50 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-main-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
                 >
                   Submit
                 </button>

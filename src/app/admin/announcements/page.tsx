@@ -5,7 +5,7 @@ import NewsFeedItem from 'components/admin/default/NewsFeedItem';
 const ANNOUNCEMENT = [
   {
     id: 1,
-    uri: 'https://hoiana-testing.vercel.app/img/example/1.webp',
+    uri: 'https://hoiana-testing.vercel.app/img/example/7.webp',
     type: 'jpg',
     priority: 1,
     description: "This is an important announcement"

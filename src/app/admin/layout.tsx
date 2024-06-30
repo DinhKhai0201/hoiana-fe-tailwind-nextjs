@@ -24,17 +24,18 @@ export default function Admin({ children }: { children: React.ReactNode }) {
       {/* Navbar & Main Content */}
       <div className="h-full w-full font-dm dark:bg-navy-900">
         {/* Main Content */}
-        <main
-          className={`mx-2.5  flex-none transition-all dark:bg-navy-900 
-              xl:ml-[237px]`}
-        >
-          {/* Routes */}
-          <div>
-            <Navbar
+        <Navbar
               onOpenSidenav={() => setOpen(!open)}
               brandText={getActiveRoute(routes, pathname)}
               secondary={getActiveNavbar(routes, pathname)}
             />
+        <main
+          className={`lg:mx-2.5  flex-none transition-all dark:bg-navy-900 
+              xl:ml-[267px]`}
+        >
+          {/* Routes */}
+          <div>
+            
             <div className="mx-auto min-h-screen p-2 !pt-[10px] md:p-2">
               {/* Breadcumboard */}
               {/* <div className="ml-[6px]">
