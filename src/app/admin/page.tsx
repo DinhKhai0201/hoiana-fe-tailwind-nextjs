@@ -107,7 +107,7 @@ export default function Home({}) {
                 NEWS FEEDS
               </h4>
               <div className="h-full">
-                <NewsFeedItem />
+                <NewsFeedItem disableHeader />
               </div>
             </div>
             <div className="mb-5">
@@ -115,7 +115,7 @@ export default function Home({}) {
                 ANNOUNCEMENTS
               </h4>
               <div className="h-full">
-                <NewsFeedItem />
+                <NewsFeedItem disableHeader />
               </div>
             </div>
           </div>

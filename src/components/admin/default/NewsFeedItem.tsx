@@ -9,11 +9,13 @@ interface INewsFeedItem {
   uri?: string;
   type?: string;
   description?: string;
+  disableHeader?: boolean;
 }
 const NewsFeedItem = ({
-  uri = 'https://hoiana.com/wp-content/uploads/2024/06/Nox-Hero-Slider.jpg',
+  uri = 'https://hoiana-testing.vercel.app/img/example/4.webp',
   type = 'png',
   description = '',
+  disableHeader = false,
 }: INewsFeedItem) => {
   return (
     <Card extra={`flex flex-col w-full h-full !p-4 3xl:p-![18px] bg-white`}>
@@ -42,11 +44,11 @@ const NewsFeedItem = ({
           </div>
         </div>
         <div className="mt-b">{description}</div>
-        <DocViewer
+        <div> <DocViewer
           prefetchMethod="GET"
           config={{
             header: {
-              disableHeader: false,
+              disableHeader,
               disableFileName: true,
               retainURLParams: false,
             },
@@ -59,7 +61,8 @@ const NewsFeedItem = ({
           }}
           documents={[{ uri }]}
           pluginRenderers={DocViewerRenderers}
-        />
+        /></div>
+       
         {/* <img
           className="rounded-xl "
           src={
