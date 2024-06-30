@@ -89,7 +89,8 @@
     "postcss": "^8.4.30",
     "prettier": "^2.8.3",
     "prettier-plugin-tailwindcss": "^0.2.1",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "unimported": "^1.31.1"
   },
   "resolutions": {
     "@types/react": "18.0.31",

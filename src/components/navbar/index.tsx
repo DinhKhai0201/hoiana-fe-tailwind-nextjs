@@ -31,8 +31,8 @@ const Navbar = (props: {
             height={100}
             src="https://hoiana.com/wp-content/uploads/2024/03/Link-%E2%86%92-HOIANA-LOGO.png.png"
           /> */}
-          <TbCompass  className=' h-[60px] w-[60px] text-white'/>
-          <p className='text-white text-[25px] hidden lg:block'>WELL COME TO HOIANA COMPASS</p>
+          <TbCompass className=' h-[60px] w-[60px] text-white'/>
+          <p className='pl-5 text-white text-[25px] hidden lg:block'>WELL COME TO HOIANA COMPASS</p>
         </div>
         <div className="flex h-full w-full items-center justify-end lg:mr-20">
           <div className="flex h-full items-center rounded-[8px] border border-white bg-main-100 text-navy-700 dark:bg-navy-900 dark:text-white xl:mr-10 xl:w-[400px]">
@@ -145,7 +145,7 @@ const Navbar = (props: {
               <div className="ml-4 mt-3">
                 <div className="flex items-center gap-2">
                   <p className="text-sm font-bold text-navy-700 dark:text-white">
-                    👋 Hey, Adela
+                    👋 Hey, Khai
                   </p>{' '}
                 </div>
               </div>
@@ -157,12 +157,6 @@ const Navbar = (props: {
                   className="text-sm text-gray-800 dark:text-white hover:dark:text-white"
                 >
                   Profile Settings
-                </a>
-                <a
-                  href=" "
-                  className="mt-3 text-sm text-gray-800 dark:text-white hover:dark:text-white"
-                >
-                  Newsletter Settings
                 </a>
                 <a
                   href="/auth/sign-in"

@@ -54,9 +54,9 @@ export default function Home({}) {
                   className="h-[50px] w-[80px]"
                 />
                 <div>
-                  <p>Monday</p>
-                  <p>17 June 2024</p>
-                  <p>09:40 AM</p>
+                  <p className="text-[22px]">Monday</p>
+                  <p className="text-[22px]">17 June 2024</p>
+                  <p className="text-[22px]">09:40 AM</p>
                 </div>
               </div>
             </div>
@@ -66,10 +66,16 @@ export default function Home({}) {
           <Card extra="carousel relative">
             <Slider {...settings} ref={(slider) => setSlider(slider)}>
               {cards.map((url, index) => (
-                <div key={index} className="relative overflow-hidden rounded-[20px]">
-                  <div className='absolute left-10 bottom-16'>
-                    <h1 className='text-[33px] text-white'>OUR VISION</h1>
-                    <p className='lead text-white'>Creating lasting memories as the Asia's premier integrated resort</p>
+                <div
+                  key={index}
+                  className="relative overflow-hidden rounded-[20px]"
+                >
+                  <div className="absolute bottom-16 left-10">
+                    <h1 className="text-[33px] text-white">OUR VISION</h1>
+                    <p className="lead text-white">
+                      Creating lasting memories as the Asia's premier integrated
+                      resort
+                    </p>
                   </div>
                   <img src={url} />
                 </div>
@@ -156,8 +162,7 @@ export default function Home({}) {
               SUGGESTIONS & FEEDBACK
             </h4>
             <Card extra=" p-[20px]">
-              <div className="flex flex-col max-w-full gap-x-4">
-               
+              <div className="flex max-w-full flex-col gap-x-4">
                 <textarea
                   required
                   className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset sm:text-sm sm:leading-6"
@@ -165,7 +170,7 @@ export default function Home({}) {
                 />
                 <button
                   type="submit"
-                  className="self-end flex-none mt-5 w-fit h-fit rounded-md bg-main-50 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-main-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
+                  className="mt-5 h-fit w-fit flex-none self-end rounded-md bg-main-50 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-main-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
                 >
                   Submit
                 </button>

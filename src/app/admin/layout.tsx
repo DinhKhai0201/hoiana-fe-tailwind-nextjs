@@ -1,7 +1,6 @@
 'use client';
 // Layout components
 import Footer from 'components/footer/Footer';
-import NavLink from 'components/link/NavLink';
 import Navbar from 'components/navbar';
 import Sidebar from 'components/sidebar';
 import { usePathname } from 'next/navigation';
@@ -25,17 +24,16 @@ export default function Admin({ children }: { children: React.ReactNode }) {
       <div className="h-full w-full font-dm dark:bg-navy-900">
         {/* Main Content */}
         <Navbar
-              onOpenSidenav={() => setOpen(!open)}
-              brandText={getActiveRoute(routes, pathname)}
-              secondary={getActiveNavbar(routes, pathname)}
-            />
+          onOpenSidenav={() => setOpen(!open)}
+          brandText={getActiveRoute(routes, pathname)}
+          secondary={getActiveNavbar(routes, pathname)}
+        />
         <main
-          className={`lg:mx-2.5  flex-none transition-all dark:bg-navy-900 
+          className={`flex-none  transition-all dark:bg-navy-900 lg:mx-2.5 
               xl:ml-[267px]`}
         >
           {/* Routes */}
           <div>
-            
             <div className="mx-auto min-h-screen p-2 !pt-[10px] md:p-2">
               {/* Breadcumboard */}
               {/* <div className="ml-[6px]">

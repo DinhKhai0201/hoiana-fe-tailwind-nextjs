@@ -26,7 +26,7 @@ const ProfileOverview = () => {
               <div>
                 <button
                   type="button"
-                  className="ryarn add next-i18next react-i18next i18nextounded-md bg-white px-3 py-2 text-sm font-semibold  shadow-sm hover:bg-white/20"
+                  className="rounded-md bg-white px-3 py-2 text-sm font-semibold  shadow-sm hover:bg-white/20"
                 >
                   Change avatar
                 </button>
