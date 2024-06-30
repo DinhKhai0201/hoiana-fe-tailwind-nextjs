@@ -9,19 +9,22 @@ import {
   MdPerson,
 } from 'react-icons/md';
 import { PiConfetti } from 'react-icons/pi';
+import { CiCircleInfo } from "react-icons/ci";
+import { IoIosFlower } from "react-icons/io";
+import { IoNewspaperOutline } from "react-icons/io5";
 
 const routes = [
   {
     name: 'Our Culture',
     layout: '/admin',
     path: 'our-culture',
-    icon: <PiConfetti className="h-6 w-6 text-white" />,
+    icon: <IoIosFlower className="h-6 w-6 text-white" />,
   },
   {
     name: 'Product Knowledge',
     layout: '/admin',
     path: 'product-knowledge',
-    icon: <PiConfetti className="h-6 w-6 text-white" />,
+    icon: <CiCircleInfo className="h-6 w-6 text-white" />,
   },
   {
     name: '',
@@ -34,7 +37,7 @@ const routes = [
     name: 'Needs Feed',
     layout: '/admin',
     path: 'news-feeds',
-    icon: <PiConfetti className="h-6 w-6 text-white" />,
+    icon: <IoNewspaperOutline className="h-6 w-6 text-white" />,
   },
   {
     name: 'Announcements',
