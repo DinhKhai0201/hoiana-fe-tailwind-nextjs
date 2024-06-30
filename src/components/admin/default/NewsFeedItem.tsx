@@ -1,9 +1,20 @@
+import DocViewer, { DocViewerRenderers } from '@cyntler/react-doc-viewer';
+import '@cyntler/react-doc-viewer/dist/index.css';
 import Card from 'components/card';
 import { Image } from 'components/image/Image';
 import { AiOutlineLike } from 'react-icons/ai';
 import { CiCircleCheck } from 'react-icons/ci';
 
-const NewsFeed = () => {
+interface INewsFeedItem {
+  uri?: string;
+  type?: string;
+  description?: string;
+}
+const NewsFeedItem = ({
+  uri = 'https://hoiana.com/wp-content/uploads/2024/06/Nox-Hero-Slider.jpg',
+  type = 'png',
+  description = '',
+}: INewsFeedItem) => {
   return (
     <Card extra={`flex flex-col w-full h-full !p-4 3xl:p-![18px] bg-white`}>
       <div>
@@ -30,20 +41,39 @@ const NewsFeed = () => {
             </p>
           </div>
         </div>
-        <img
+        <div className="mt-b">{description}</div>
+        <DocViewer
+          prefetchMethod="GET"
+          config={{
+            header: {
+              disableHeader: false,
+              disableFileName: true,
+              retainURLParams: false,
+            },
+            csvDelimiter: ',', // "," as default,
+            pdfZoom: {
+              defaultZoom: 1.1, // 1 as default,
+              zoomJump: 0.2, // 0.1 as default,
+            },
+            pdfVerticalScrollByDefault: true, // false as default
+          }}
+          documents={[{ uri }]}
+          pluginRenderers={DocViewerRenderers}
+        />
+        {/* <img
           className="rounded-xl "
           src={
-            'https://hoiana.com/wp-content/uploads/2024/06/Nox-Hero-Slider.jpg'
+            url
           }
           alt=""
-        />
-        <div className="mt-4 flex items-center gap-5">
+        /> */}
+        <div className="mt-4 flex items-center gap-10">
           <div className="flex items-center gap-2">
-            <CiCircleCheck height={20} />
+            <CiCircleCheck className="h-8 w-8" />
             <p>399</p>
           </div>
           <div className="flex items-center gap-2">
-            <AiOutlineLike />
+            <AiOutlineLike className="h-8 w-8" />
             <p>720</p>
           </div>
         </div>
@@ -51,4 +81,4 @@ const NewsFeed = () => {
     </Card>
   );
 };
-export default NewsFeed;
+export default NewsFeedItem;

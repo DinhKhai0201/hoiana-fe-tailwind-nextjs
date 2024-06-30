@@ -51,3 +51,10 @@ input:checked.defaultCheckbox::before {
 .banner-slider .slick-dots li.slick-active button:before {
   color:white;
 }
+#react-doc-viewer .react-pdf__Document{
+  margin: 0;
+}
+#react-doc-viewer .react-pdf__Document .react-pdf__Page__canvas{
+  width: 100%!important;
+  height: 100%!important;
+}

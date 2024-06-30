@@ -1,6 +1,6 @@
 'use client';
 
-import NewsFeed from 'components/admin/default/NewsFeed';
+import NewsFeedItem from 'components/admin/default/NewsFeedItem';
 import Card from 'components/card';
 import { useState } from 'react';
 import Slider from 'react-slick';
@@ -48,10 +48,10 @@ export default function Home({}) {
               </div>
             </div>
             <div className="w-full">
-              <div className="flex items-end justify-between">
+              <div className="flex items-end gap-4">
                 <img
                   src="/img/example/weather-icon.webp"
-                  className="h-[40px] w-[70px]"
+                  className="h-[50px] w-[80px]"
                 />
                 <div>
                   <p>Monday</p>
@@ -107,7 +107,7 @@ export default function Home({}) {
                 NEWS FEEDS
               </h4>
               <div className="h-full">
-                <NewsFeed />
+                <NewsFeedItem />
               </div>
             </div>
             <div className="mb-5">
@@ -115,7 +115,7 @@ export default function Home({}) {
                 ANNOUNCEMENTS
               </h4>
               <div className="h-full">
-                <NewsFeed />
+                <NewsFeedItem />
               </div>
             </div>
           </div>

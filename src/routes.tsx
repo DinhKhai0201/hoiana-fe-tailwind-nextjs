@@ -25,7 +25,7 @@ const routes = [
   },
   {
     name: '',
-    layout: '',
+    layout: '/admin',
     path: 'devider',
     icon: <PiConfetti className="h-6 w-6 text-white" />,
 

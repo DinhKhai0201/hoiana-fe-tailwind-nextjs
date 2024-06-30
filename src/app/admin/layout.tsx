@@ -26,7 +26,7 @@ export default function Admin({ children }: { children: React.ReactNode }) {
         {/* Main Content */}
         <main
           className={`mx-2.5  flex-none transition-all dark:bg-navy-900 
-              xl:ml-[247px]`}
+              xl:ml-[257px]`}
         >
           {/* Routes */}
           <div>
@@ -36,7 +36,8 @@ export default function Admin({ children }: { children: React.ReactNode }) {
               secondary={getActiveNavbar(routes, pathname)}
             />
             <div className="mx-auto min-h-screen p-2 !pt-[10px] md:p-2">
-              <div className="ml-[6px]">
+              {/* Breadcumboard */}
+              {/* <div className="ml-[6px]">
                 <div className="h-6 w-[224px] pt-1">
                   <a
                     className="text-sm font-normal text-navy-700 hover:underline dark:text-white dark:hover:text-white"
@@ -63,7 +64,7 @@ export default function Admin({ children }: { children: React.ReactNode }) {
                     {getActiveRoute(routes, pathname)}
                   </NavLink>
                 </p>
-              </div>
+              </div> */}
 
               {children}
             </div>

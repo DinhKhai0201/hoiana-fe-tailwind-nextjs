@@ -11,7 +11,6 @@ export const SidebarLinks = (props: { routes: RoutesType[] }): JSX.Element => {
   const pathname = usePathname();
 
   const { routes } = props;
-
   // verifies if routeName is the one active (in browser input)
   const activeRoute = useCallback(
     (routeName: string) => {
@@ -24,17 +23,16 @@ export const SidebarLinks = (props: { routes: RoutesType[] }): JSX.Element => {
     return routes.map((route, index) => {
       if (
         route.layout === '/admin' ||
-        route.layout === '/auth' ||
-        route.layout === '/rtl'
+        route.layout === '/auth'
       ) {
         if (route.path =='devider') {
-          return <div className='h-1 bg-white'>sdd</div>
+          return <div className='h-[0.5px] my-4 bg-white'></div>
         }
         return (
           <NavLink key={index} href={route.layout + '/' + route.path}>
             <div className="relative mb-3 flex hover:cursor-pointer">
               <li
-                className="my-[3px] flex cursor-pointer items-center px-8"
+                className="flex cursor-pointer items-center my-2"
                 key={index}
               >
                 <span
@@ -49,16 +47,16 @@ export const SidebarLinks = (props: { routes: RoutesType[] }): JSX.Element => {
                 <p
                   className={`leading-1 ml-4 flex ${
                     activeRoute(route.path) === true
-                      ? 'font-bold text-navy-700 dark:text-white'
+                      ? 'text-[18px] font-bold text-white dark:text-white'
                       : ' text-white'
                   }`}
                 >
                   {route.name}
                 </p>
               </li>
-              {activeRoute(route.path) ? (
-                <div className="absolute right-0 top-px h-9 w-1 rounded-lg bg-brand-500 dark:bg-brand-400" />
-              ) : null}
+              {/* {activeRoute(route.path) ? (
+                <div className="absolute right-0 top-px h-9 w-1 rounded-lg bg-white dark:bg-white" />
+              ) : null} */}
             </div>
           </NavLink>
         );
