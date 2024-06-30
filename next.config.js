@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const { i18n } = require('./next-i18next.config')
 
 // const withTM = require('next-transpile-modules')(['@babel/preset-react']);
 //   '@fullcalendar/common',
@@ -23,6 +24,7 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  i18n
 };
 
 module.exports = nextConfig;

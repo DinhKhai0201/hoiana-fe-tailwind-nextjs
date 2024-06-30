@@ -9,6 +9,7 @@ function InputField(props: {
   disabled?: boolean;
   type?: string;
   onChange?: any;
+  value?: string;
 }) {
   const {
     label,
@@ -19,6 +20,7 @@ function InputField(props: {
     variant,
     state,
     disabled,
+    value,
     onChange,
   } = props;
 
@@ -27,7 +29,7 @@ function InputField(props: {
       <label
         htmlFor={id}
         className={`text-sm text-navy-700 dark:text-white ${
-          variant === "auth" ? "ml-1.5 font-medium" : "ml-3 font-bold"
+          variant === "auth" ? "ml-1.5 font-medium" : "font-bold"
         }`}
       >
         {label}
@@ -38,7 +40,8 @@ function InputField(props: {
         type={type}
         id={id}
         placeholder={placeholder}
-        className={`mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none ${
+        value={value}
+        className={`mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none bg-[white] ${
           disabled === true
             ? "!border-none !bg-gray-100 dark:!bg-white/5 dark:placeholder:!text-[rgba(255,255,255,0.15)]"
             : state === "error"

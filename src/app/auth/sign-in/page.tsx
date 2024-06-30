@@ -3,6 +3,7 @@ import Default from 'components/auth/variants/DefaultAuthLayout';
 import Checkbox from 'components/checkbox';
 import InputField from 'components/fields/InputField';
 import Link from 'next/link';
+import { TbCompass } from 'react-icons/tb';
 
 function SignInDefault() {
   return (
@@ -10,7 +11,13 @@ function SignInDefault() {
       maincard={
         <div className="mb-16 mt-16 flex h-full w-full items-center justify-center px-2 md:mx-0 md:px-0 lg:mb-10 lg:items-center lg:justify-center">
           {/* Sign in section */}
-          <div className="mt-[10vh] w-full max-w-full flex-col items-center md:pl-4 lg:pl-0 xl:max-w-[420px]">
+          <div className="mt-[5vh] w-full max-w-full flex-col items-center md:pl-4 lg:pl-0 xl:max-w-[420px]">
+            <div className={`mb-5 flex flex-col items-center whitespace-nowrap`}>
+              <TbCompass className=" h-[60px] w-[60px] text-main-50" />
+              <p className=" text-[25px] text-main-50 ">
+                WELL COME TO HOIANA COMPASS
+              </p>
+            </div>
             <h3 className="mb-2.5 text-center text-4xl font-bold text-navy-700 dark:text-white">
               Sign In
             </h3>
@@ -45,14 +52,14 @@ function SignInDefault() {
                 </p>
               </div>
               <a
-                className="text-sm font-medium text-brand-500 hover:text-brand-600 dark:text-white"
+                className="text-sm font-medium text-gray-500 hover:text-gray-600 dark:text-white"
                 href=" "
               >
                 Forgot Password?
               </a>
             </div>
             <Link href="/admin">
-              <button className="linear w-full rounded-xl bg-brand-500 py-3 text-base font-medium text-white transition duration-200 hover:bg-brand-600 active:bg-brand-700 dark:bg-brand-400 dark:text-white dark:hover:bg-brand-300 dark:active:bg-brand-200">
+              <button className="linear w-full rounded-xl bg-main-50 py-3 text-base font-medium text-white transition duration-200 hover:bg-brand-600 active:bg-main-100 dark:bg-brand-400 dark:text-white dark:hover:bg-brand-300 dark:active:bg-brand-200">
                 Sign In
               </button>
             </Link>
@@ -63,7 +70,7 @@ function SignInDefault() {
               </span>
               <a
                 href="/auth/sign-up/default"
-                className="ml-1 text-sm font-medium text-brand-500 hover:text-brand-600 dark:text-white"
+                className="ml-1 text-sm font-medium text-gray-500 hover:text-gray-600 dark:text-white"
               >
                 Create an account
               </a>
