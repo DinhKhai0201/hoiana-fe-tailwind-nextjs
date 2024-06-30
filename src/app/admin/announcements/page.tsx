@@ -7,7 +7,8 @@ const ANNOUNCEMENT = [
     id: 1,
     uri: 'https://hoiana-testing.vercel.app/img/example/1.webp',
     type: 'jpg',
-    description: "important announcement"
+    priority: 1,
+    description: "This is an important announcement"
   },
   {
     id: 2,

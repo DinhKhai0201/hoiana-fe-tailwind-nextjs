@@ -35,9 +35,15 @@ const NEWSFEEDS = [
   },
   {
     id: 6,
-    uri:'https://hoiana-testing.vercel.app/img/example/sample.doc',
-    type: 'doc',
-    description: "doc"
+    uri:'https://hoiana-testing.vercel.app/img/example/docx.docx',
+    type: 'docx',
+    description: "docx"
+  },
+  {
+    id: 7,
+    uri:'https://hoiana-testing.vercel.app/img/example/ppt.ppt',
+    type: 'ppt',
+    description: "ppt"
   },
 ];
 

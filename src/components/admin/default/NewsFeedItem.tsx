@@ -9,11 +9,13 @@ interface INewsFeedItem {
   uri?: string;
   type?: string;
   description?: string;
+  priority?: number;
   disableHeader?: boolean;
 }
 const NewsFeedItem = ({
   uri = 'https://hoiana-testing.vercel.app/img/example/4.webp',
   type = 'png',
+  priority = 0,
   description = '',
   disableHeader = false,
 }: INewsFeedItem) => {
@@ -43,26 +45,32 @@ const NewsFeedItem = ({
             </p>
           </div>
         </div>
+        {priority ==1 && (
+          <div>
+            <span className="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
+              Important
+            </span>
+          </div>
+        )}
         <div className="mt-b">{description}</div>
-        <div> <DocViewer
-          prefetchMethod="GET"
-          config={{
-            header: {
-              disableHeader,
-              disableFileName: true,
-              retainURLParams: false,
-            },
-            csvDelimiter: ',', // "," as default,
-            pdfZoom: {
-              defaultZoom: 1.1, // 1 as default,
-              zoomJump: 0.2, // 0.1 as default,
-            },
-            pdfVerticalScrollByDefault: true, // false as default
-          }}
-          documents={[{ uri }]}
-          pluginRenderers={DocViewerRenderers}
-        /></div>
-       
+        <div>
+          {' '}
+          <DocViewer
+            prefetchMethod="GET"
+            config={{
+              header: {
+                disableHeader,
+                disableFileName: true,
+                retainURLParams: false,
+              },
+              csvDelimiter: ',', // "," as default,
+              pdfVerticalScrollByDefault: false, // false as default
+            }}
+            documents={[{ uri }]}
+            pluginRenderers={DocViewerRenderers}
+          />
+        </div>
+
         {/* <img
           className="rounded-xl "
           src={
