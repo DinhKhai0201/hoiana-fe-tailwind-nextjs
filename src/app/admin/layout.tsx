@@ -26,7 +26,7 @@ export default function Admin({ children }: { children: React.ReactNode }) {
         {/* Main Content */}
         <main
           className={`mx-2.5  flex-none transition-all dark:bg-navy-900 
-              xl:ml-[257px]`}
+              xl:ml-[237px]`}
         >
           {/* Routes */}
           <div>

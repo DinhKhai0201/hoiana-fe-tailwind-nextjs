@@ -28,7 +28,8 @@ const Navbar = (props: {
   );
   return (
     <nav className="sticky top-0 z-40  bg-main-100 p-2 backdrop-blur-xl dark:bg-[#0b14374d]">
-      <div className="relative justify-end mt-[3px] flex h-[61px] flex-grow items-center gap-2  px-2 py-2 shadow-xl shadow-shadow-500 dark:shadow-none  md:flex-grow-0 md:gap-1 xl:gap-2">
+      <div className="relative justify-between mt-[3px] flex h-[61px] flex-grow items-center gap-2  px-2 py-2 shadow-xl shadow-shadow-500 dark:shadow-none  md:flex-grow-0 md:gap-1 xl:gap-2">
+        <div className='h-full w-full flex items-center justify-end lg:mr-20'>
         <div className="flex h-full items-center rounded-[8px] border border-white bg-main-100 text-navy-700 dark:bg-navy-900 dark:text-white xl:w-[400px] xl:mr-10">
           <p className="pl-3 pr-2 text-xl">
             <FiSearch className="h-8 w-8 text-white dark:text-white" />
@@ -39,6 +40,8 @@ const Navbar = (props: {
             className="block h-full w-full  bg-main-100 text-sm font-medium text-white outline-none placeholder:!text-white dark:text-white dark:placeholder:!text-white sm:w-fit"
           />
         </div>
+        </div>
+       
         <div className='flex items-center gap-6'>
           <div className='text-white hidden xl:block'><Link href="/admin">HOME</Link></div>
           <div className='text-white hidden xl:block'>LANGUAGES</div>
