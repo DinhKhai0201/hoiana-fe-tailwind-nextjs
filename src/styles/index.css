@@ -58,3 +58,6 @@ input:checked.defaultCheckbox::before {
   width: 100%!important;
   height: 100%!important;
 }
+#msdoc-renderer {
+  min-height: 500px;
+}

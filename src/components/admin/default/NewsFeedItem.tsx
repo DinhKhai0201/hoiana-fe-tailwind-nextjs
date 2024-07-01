@@ -55,7 +55,7 @@ const NewsFeedItem = ({
         <div className="mt-b">{description}</div>
         <div>
           <DocViewer
-          style={{  minHeight: 500 }} 
+            // style={{  minHeight: 500 }} 
             prefetchMethod="GET"
             config={{
               header: {
